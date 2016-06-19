@@ -144,32 +144,6 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
                     .negativeText("CLOSE")
                     .build()
                     .show();
-//              .input(R.string.input_hint, R.string.input_prefill, new MaterialDialog.InputCallback() {
-//                @Override public void onInput(MaterialDialog dialog, CharSequence input) {
-//                  // On FAB click, receive user input. Make sure the stock doesn't already exist
-//                  // in the DB and proceed accordingly
-//                  Cursor c = getContentResolver().query(QuoteProvider.Quotes.CONTENT_URI,
-//                      new String[] { QuoteColumns.SYMBOL }, QuoteColumns.SYMBOL + "= ?",
-//                      new String[] { input.toString() }, null);
-//                  if (c.getCount() != 0) {
-//                    c.close();
-//                    Toast toast =
-//                            Toast.makeText(MyStocksActivity.this, R.string.stock_exist_text,
-//                                    Toast.LENGTH_LONG);
-//                    toast.setGravity(Gravity.CENTER, Gravity.CENTER, 0);
-//                    toast.show();
-////                    return;
-//                  }
-//                  else {
-//                    // Add the stock to DB
-//                    mServiceIntent.putExtra("tag", "add");
-//                    mServiceIntent.putExtra("symbol", input.toString());
-//                    startService(mServiceIntent);
-//                    c.close();
-//                  }
-//                }
-//              })
-//              .show();
         } else {
           networkToast();
         }
